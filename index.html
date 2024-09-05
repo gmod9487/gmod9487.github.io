@@ -7,13 +7,13 @@
   <!-- 引入 Google 字體 -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* 使用深色漸變背景，並添加透明覆蓋層 */
+    /* 深色漸變背景設置 */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #000000, #4B3A22); /* 黑色到深金色的漸變 */
-      color: #ffffff;
+      background: linear-gradient(135deg, #1a1a1a, #4B3A22); /* 黑色到深金色的漸變 */
+      color: #ffffff; /* 主字體顏色 */
       position: relative;
     }
 
@@ -25,8 +25,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* 50% 透明度的黑色覆蓋層 */
-      z-index: -1; /* 保證覆蓋層在內容後面 */
+      background-color: rgba(0, 0, 0, 0.6); /* 60% 透明度的黑色覆蓋層 */
+      z-index: -1;
     }
 
     /* Hero 區域設置 */
@@ -39,28 +39,32 @@
       justify-content: center;
       align-items: center;
       flex-direction: column; /* 確保標題和副標題垂直排列 */
-      color: #ffd700;
+      color: #ffd700; /* 金色字體 */
       text-align: center;
       padding: 20px; /* 增加內邊距確保文本不會靠得太近 */
     }
 
+    /* 主標題設置 */
     h1 {
       font-size: 2.5em; /* 調整標題字體大小，避免過大 */
       letter-spacing: 1px;
       margin-bottom: 10px; /* 增加標題與副標題之間的間距 */
+      color: #ffd700; /* 金色字體 */
     }
 
+    /* 副標題設置 */
     h2 {
       font-size: 1.8em; /* 調整副標題字體大小 */
       letter-spacing: 0.5px;
       margin-top: 0; /* 保持副標題和標題緊湊，但不擁擠 */
+      color: #ffd700; /* 金色字體 */
     }
 
     /* 段落設置 */
     p {
       font-size: 1.2em;
       line-height: 1.6;
-      color: #d4af37;
+      color: #d4af37; /* 金色變體字體 */
       margin-bottom: 20px;
     }
 
@@ -120,8 +124,8 @@
       }
 
       .hero-section {
-        height: 450px; /* 增加背景區域的高度，讓標題有足夠空間 */
-        padding-top: 40px; /* 增加頂部內邊距，確保標題顯示良好 */
+        height: 450px; /* 增加背景區域的高度 */
+        padding-top: 40px;
       }
     }
 
@@ -136,11 +140,11 @@
       }
 
       p {
-        font-size: 1.1em; /* 調整正文字體大小 */
+        font-size: 1.1em;
       }
 
       .hero-section {
-        height: 350px; /* 調整背景區域的高度 */
+        height: 350px;
       }
     }
 
