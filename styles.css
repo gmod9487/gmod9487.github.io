@@ -1,0 +1,53 @@
+/* 基本樣式設置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* 頁面標題樣式 */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* 主要內容樣式 */
+main {
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* 按鈕樣式 */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 頁腳樣式 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
