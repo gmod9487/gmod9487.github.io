@@ -65,6 +65,11 @@ h2 {
 
 a {
     color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
