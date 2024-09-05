@@ -73,7 +73,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.5em;
       text-transform: uppercase;
-      background-color: #FFD700;
+      background: linear-gradient(45deg, #FFD700, #FFA500); /* 漸變背景，金色到橙色 */
       color: #333;
       padding: 15px 30px;
       border-radius: 50px;
@@ -81,11 +81,16 @@
       font-weight: bold;
       letter-spacing: 1.5px;
       display: inline-block;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
     }
 
+    /* 懸停效果 */
     .cta-button:hover {
-      background-color: #FFA500;
+      background: linear-gradient(45deg, #FFA500, #FF4500); /* 懸停時變成橙色到深橙色漸變 */
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 增強陰影效果 */
+      transform: scale(1.05); /* 輕微放大按鈕 */
     }
 
     /* 主內容區域 */
@@ -177,3 +182,4 @@
 
 </body>
 </html>
+
