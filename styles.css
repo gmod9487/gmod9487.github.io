@@ -12,8 +12,10 @@ body {
 }
 
 header.hero {
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* 漸層效果 */
-    height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* 背景漸層 */
+    background-size: cover; /* 確保背景覆蓋整個區域 */
+    background-position: center; /* 背景居中顯示 */
+    height: 100vh; /* 佔滿整個螢幕的高度 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +23,7 @@ header.hero {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景，使文字與背景對比清晰 */
     padding: 20px;
     border-radius: 10px;
 }
@@ -93,7 +95,7 @@ h2 {
     height: 60px;
 }
 
-/* 響應式設計 */
+/* 響應式設計，讓按鈕在手機上變小 */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -105,7 +107,7 @@ h2 {
     }
 
     .cta-button, .contact-button {
-        width: 100%;
+        width: 100%;  /* 手機上按鈕全寬 */
         padding: 20px 30px;
         font-size: 1.6rem;
     }
@@ -120,6 +122,7 @@ h2 {
         margin-bottom: 20px;
     }
 
+    /* 手機上縮小IG按鈕和logo */
     .contact-button {
         width: 80px;
         height: 80px;
