@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UP國際娛樂</title>
+    <title>UP 國際娛樂 - 酒店經紀</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>歡迎來到我的網站</h1>
+        <h1>UP 國際娛樂</h1>
+        <p>專業酒店經紀，提供頂級娛樂工作機會</p>
     </header>
 
-    <main>
-        <p>這是一個簡單的示範網站，展示 HTML、CSS 和 JavaScript 的使用。</p>
-        <button id="welcomeButton">按我一下</button>
-    </main>
+    <nav>
+        <ul>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#services">服務項目</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>關於我們</h2>
+        <p>UP 國際娛樂是一家專業的酒店經紀公司，致力於為年輕有潛力的人才提供高薪低壓的娛樂行業工作機會。我們的工作環境像一個大家庭，工作日過得快樂，週末玩得開心。</p>
+        <p>只要妳/你願意，我們這裡有超高的薪資、低的壓力，輕鬆賺錢，輕鬆生活。</p>
+    </section>
+
+    <section id="services">
+        <h2>服務項目</h2>
+        <ul>
+            <li>頂級酒店工作機會</li>
+            <li>專業經紀團隊支持</li>
+            <li>多元的娛樂工作選擇</li>
+            <li>全方位的職業規劃與輔導</li>
+        </ul>
+        <p>我們提供酒店工作機會，讓你在工作中找到快樂，輕鬆賺取高薪，同時享受工作與生活的平衡。</p>
+    </section>
+
+    <section id="contact">
+        <h2>聯絡我們</h2>
+        <p>如果你對我們的工作機會有興趣，隨時聯絡我們：</p>
+        <ul>
+            <li>電話：+886 123 456 789</li>
+            <li>Email：contact@up-entertainment.com</li>
+            <li>地址：台北市信義區某某路100號</li>
+        </ul>
+        <p>或者你可以直接通過下方表單聯絡我們：</p>
+        <form action="https://formspree.io/f/myemail" method="POST">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email：</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">留言：</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            
+            <button type="submit">送出</button>
+        </form>
+    </section>
 
     <footer>
-        <p>版權所有 &copy; 2024 我的網站</p>
+        <p>版權所有 &copy; 2024 UP 國際娛樂</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
