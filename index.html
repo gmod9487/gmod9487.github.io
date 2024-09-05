@@ -1,189 +1,39 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UP國際娛樂 - 高薪酒店經紀招募</title>
-  
-  <!-- SEO 關鍵字和描述 -->
-  <meta name="description" content="UP國際娛樂提供專業的酒店經紀服務，誠邀高薪酒店經紀加入我們，享受優質的工作環境和靈活的工作時間。">
-  <meta name="keywords" content="UP國際娛樂, 酒店經紀, 高薪酒店經紀, 招募小姐, 酒店工作">
-  
-  <!-- 引入 Google 字體 -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    /* 深色漸變背景設置 */
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1a1a1a, #4B3A22); /* 黑色到深金色的漸變 */
-      color: #ffffff; /* 主字體顏色 */
-      position: relative;
-    }
-
-    /* 透明的暗色覆蓋層，讓背景更柔和 */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); /* 60% 透明度的黑色覆蓋層 */
-      z-index: -1;
-    }
-
-    /* Hero 區域設置 */
-    .hero-section {
-      background-image: url('images/your-image-file.png'); /* 替換為你的背景圖片 */
-      background-size: cover;
-      background-position: center;
-      height: 500px; /* 增加背景區域高度，避免擁擠 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; /* 確保標題和副標題垂直排列 */
-      color: #ffd700; /* 金色字體 */
-      text-align: center;
-      padding: 20px; /* 增加內邊距確保文本不會靠得太近 */
-    }
-
-    /* 主標題設置 */
-    h1 {
-      font-size: 2.5em; /* 調整標題字體大小，避免過大 */
-      letter-spacing: 1px;
-      margin-bottom: 10px; /* 增加標題與副標題之間的間距 */
-      color: #ffd700; /* 金色字體 */
-    }
-
-    /* 副標題設置 */
-    h2 {
-      font-size: 1.8em; /* 調整副標題字體大小 */
-      letter-spacing: 0.5px;
-      margin-top: 0; /* 保持副標題和標題緊湊，但不擁擠 */
-      color: #ffd700; /* 金色字體 */
-    }
-
-    /* 段落設置 */
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #d4af37; /* 金色變體字體 */
-      margin-bottom: 20px;
-    }
-
-    /* 行動呼籲按鈕 */
-    .cta-button {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
-      text-transform: uppercase;
-      background: linear-gradient(45deg, #FFD700, #FFA500); /* 漸變背景，金色到橙色 */
-      color: #333;
-      padding: 20px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
-    }
-
-    /* 懸停效果 */
-    .cta-button:hover {
-      background: linear-gradient(45deg, #FFA500, #FF4500); /* 懸停時變成橙色到深橙色漸變 */
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 增強陰影效果 */
-      transform: scale(1.05); /* 輕微放大按鈕 */
-    }
-
-    /* 主內容區域 */
-    .main-content {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* 手機優化 */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.5em; /* 進一步減小標題字體大小 */
-        letter-spacing: 0.5px;
-        line-height: 1.2; /* 減小行高，讓標題更緊湊 */
-        margin-bottom: 5px; /* 減少標題與內容之間的間距 */
-      }
-
-      h2 {
-        font-size: 1.3em; /* 減小副標題字體大小 */
-        letter-spacing: 0.5px;
-        line-height: 1.2; /* 讓副標題更緊湊 */
-      }
-
-      p {
-        font-size: 1em; /* 調整正文字體大小 */
-      }
-
-      .cta-button {
-        font-size: 1.1em; /* 調整按鈕字體大小 */
-        padding: 8px 15px; /* 調整按鈕的內邊距 */
-      }
-
-      .main-content {
-        padding: 10px; /* 減少內邊距，適應小屏幕 */
-      }
-
-      .hero-section {
-        height: 450px; /* 增加背景區域的高度 */
-        padding-top: 40px;
-      }
-    }
-
-    /* 平板電腦優化 */
-    @media (max-width: 1024px) {
-      h1 {
-        font-size: 2.5em; /* 調整標題字體大小 */
-      }
-
-      h2 {
-        font-size: 2.2em;
-      }
-
-      p {
-        font-size: 1.1em;
-      }
-
-      .hero-section {
-        height: 350px;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="專業的投資教學網站，提供UP國際的資源和專業團隊的支持，助您在投資領域取得成功。">
+    <title>投資教學網站</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>專業的投資教學</h1>
+            <p>UP國際資源和團隊支持助您成功</p>
+            <a href="#learn-more" class="cta-button">了解更多</a>
+        </div>
+    </header>
 
-  <!-- 頭部區域 -->
-  <div class="hero-section">
-    <h1>UP國際娛樂</h1>
-    <h2>頂尖酒店經紀招募</h2>
-  </div>
+    <section id="learn-more" class="content-section">
+        <h2>我們的服務</h2>
+        <p>提供專業的投資知識分享，UP國際的資源與團隊支持，涵蓋各種投資技巧與實戰經驗。</p>
+    </section>
 
-  <!-- 主要內容區域 -->
-  <div class="main-content">
-    <h2>高薪機會等你加入</h2>
-    <p>UP國際娛樂致力於為優質人才提供高端就業機會。我們正誠邀有志之士加入我們的酒店經紀團隊，無論你是新手還是有經驗的專業人士，我們都能為你提供理想的平台，讓你開創輝煌的職業生涯。</p>
+    <section id="team" class="content-section">
+        <h2>團隊介紹</h2>
+        <p>UP國際的專業投資團隊，擁有豐富的實戰經驗，助您在投資路上取得成功。</p>
+    </section>
 
-    <h2>加入我們的優勢</h2>
-    <p>我們提供專業的培訓、靈活的工作時間以及業界頂尖的客戶資源。與我們合作，你將享受高度的自由與安全的工作環境，讓你在舒適的氛圍中實現財務自由。我們的酒店經紀職位不僅有高薪保障，還能為你提供長期的職業發展機遇。</p>
+    <section id="contact" class="content-section">
+        <h2>聯繫我們</h2>
+        <p>Email: <a href="mailto:info@upinvest.com">info@upinvest.com</a></p>
+        <p>電話: +886 1234 5678</p>
+    </section>
 
-    <h2>我們的使命</h2>
-    <p>我們的使命是讓每位合作夥伴都能在頂級的工作環境中發展自己的潛力。我們理解每個人的需求不同，因此提供個性化的發展方案，確保你能夠在短時間內實現個人和職業的雙重成長。</p>
-  </div>
-
-  <!-- 行動呼籲按鈕 -->
-  <div class="contact-info">
-    <a href="https://www.instagram.com/love.__.1688/" target="_blank" class="cta-button">立即關注我們</a>
-  </div>
-
+    <footer>
+        <p>© 2024 投資教學網站. 保留所有權利.</p>
+    </footer>
 </body>
 </html>
