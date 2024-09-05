@@ -3,107 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- 添加關鍵詞到網站標題 -->
-  <title>UP國際娛樂 - 酒店經紀招小姐 | 高薪招募 | 酒店經紀工作</title>
-  
-  <!-- 添加關鍵詞到meta標籤 -->
-  <meta name="description" content="UP國際娛樂提供專業酒店經紀服務，誠招高薪小姐，無論有經驗或無經驗，均可獲得頂級資源及安全舒適的工作環境。">
-  
-  <!-- 添加關鍵詞到meta標籤 -->
-  <meta name="keywords" content="酒店經紀, 高薪招募, 招小姐, 酒店經紀工作, 酒店小姐, 酒店工作, 台灣酒店經紀">
-  
+  <title>UP國際娛樂 - 酒店經紀招小姐</title>
   <style>
-    /* 設置頁面的通用樣式 */
+    /* 使用深色漸變背景 */
     body {
-  font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #000000, #FFD700); /* 黑色到金色的漸變 */
+      background: linear-gradient(135deg, #000000, #4B3A22); /* 黑色到深金色的漸變 */
       color: #ffffff;
-      color: #ffd700; /* 設置金色文本顏色 */
+      position: relative;
     }
 
-    /* 設置頭部區域的樣式 */
+    /* 如果使用背景圖片，添加黑色覆蓋層 */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* 50% 透明度的黑色覆蓋層 */
+      z-index: -1; /* 保證覆蓋層在內容後面 */
+    }
+
+    /* 頭部區域樣式 */
     .hero-section {
-      background-image: url('images/your-image-file.png'); /* 設置頭部背景圖片 */
-      background-size: cover; /* 背景圖片完全覆蓋區域 */
-      background-position: center; /* 背景圖片居中顯示 */
-      background-repeat: no-repeat; /* 背景圖片不重複 */
-      height: 400px; /* 設置頭部高度 */
+      background-image: url('images/your-image-file.png'); /* 背景圖片 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px;
       display: flex;
-      justify-content: center; /* 水平居中內容 */
-      align-items: center; /* 垂直居中內容 */
-      color: #ffd700; /* 設置頭部文本為金色 */
-      text-align: center; /* 文本居中 */
-      font-size: 2.5em; /* 設置大號字體 */
+      justify-content: center;
+      align-items: center;
+      color: #ffd700;
+      text-align: center;
+      font-size: 2.5em;
     }
 
-    /* 設置主要內容區域的樣式 */
     .main-content {
-      padding: 20px; /* 設置內部留白 */
-      max-width: 1200px; /* 最大寬度 */
-      margin: 0 auto; /* 內容居中 */
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    /* 標題的樣式 */
     h2 {
-      font-size: 2em; /* 設置標題大小 */
-      color: #ffd700; /* 標題顏色為金色 */
-      text-align: center; /* 標題居中 */
+      font-size: 2em;
+      color: #ffd700;
+      text-align: center;
     }
 
-    /* 段落的樣式 */
     p {
-      font-size: 1.2em; /* 設置段落文字大小 */
-      line-height: 1.6; /* 行距 */
-      color: #d4af37; /* 文本顏色為金色的變體 */
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #d4af37;
     }
 
-    /* 聯繫方式的樣式 */
     .contact-info {
-      background-color: #333333; /* 設置深色背景 */
-      padding: 20px; /* 內部留白 */
-      margin-top: 30px; /* 上方間距 */
-      border-radius: 10px; /* 圓角 */
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* 添加金色陰影 */
-      text-align: center; /* 居中 */
+      background-color: #333333;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      text-align: center;
     }
 
-    /* 聯繫方式文字的樣式 */
     .contact-info p {
-      font-size: 1.5em; /* 設置文字大小 */
-      color: #ffd700; /* 設置文本顏色為金色 */
+      font-size: 1.5em;
+      color: #ffd700;
     }
 
-    /* Instagram 按鈕的樣式 */
     .contact-info a {
-      display: inline-block; /* 使連結像按鈕一樣顯示 */
-      padding: 10px 20px; /* 內部留白 */
-      background-color: #e1306c; /* Instagram 品牌顏色 */
-      color: #fff; /* 按鈕文字顏色為白色 */
-      text-decoration: none; /* 去掉下劃線 */
-      border-radius: 5px; /* 按鈕圓角 */
-      font-size: 1.2em; /* 按鈕文字大小 */
-      margin-top: 15px; /* 按鈕的上方間距 */
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e1306c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      margin-top: 15px;
     }
 
-    /* 滑過按鈕時改變背景顏色 */
     .contact-info a:hover {
-      background-color: #c13584; /* 滑鼠滑過時顏色變化，Instagram 品牌色 */
+      background-color: #c13584;
     }
   </style>
 </head>
 <body>
 
-  <!-- 頭部區域，顯示網站名稱和背景圖片 -->
+  <!-- 頭部區域 -->
   <div class="hero-section">
     UP國際娛樂 - 酒店經紀招小姐
   </div>
 
   <!-- 主要內容區域 -->
   <div class="main-content">
-    <!-- 段落介紹 -->
     <h2>成為我們的一員，開啟新機遇</h2>
     <p>我們是 UP國際娛樂，一家專業的酒店經紀公司，現誠招高薪小姐加入。無論妳是有經驗的從業者，還是想要探索這個行業的新手，我們為妳提供優質的平台和資源，幫助妳獲得高收入並享受靈活的工作時間。</p>
     
@@ -115,7 +110,6 @@
   <div class="contact-info">
     <h2>聯繫我們</h2>
     <p>關注我們的 Instagram：</p>
-    <!-- 將連結替換為你的 Instagram 主頁 -->
     <a href="https://www.instagram.com/love.__.1688/" target="_blank">關注我們</a>
   </div>
 
