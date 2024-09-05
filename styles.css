@@ -6,20 +6,31 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c1c1e;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* 背景漸層 */
+    background-size: cover; /* 確保背景覆蓋整個區域 */
+    background-position: center; /* 背景居中顯示 */
     color: #f5f5f7;
     line-height: 1.6;
 }
 
 header.hero {
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* 背景漸層 */
-    background-size: cover; /* 確保背景覆蓋整個區域 */
-    background-position: center; /* 背景居中顯示 */
+    background: inherit; /* 繼承全局背景 */
     height: 100vh; /* 佔滿整個螢幕的高度 */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.header-logo {
+    text-align: center; /* Logo 居中對齊 */
+    margin-bottom: 20px; /* 與頁首保持一點距離 */
+}
+
+.logo-image {
+    width: 150px; /* 設定 Logo 的寬度 */
+    height: auto; /* 根據寬度自動調整高度 */
 }
 
 .hero-content {
@@ -50,7 +61,7 @@ p {
 .content-section {
     padding: 40px;
     text-align: center;
-    background-color: #2c2c2e;
+    background: inherit; /* 繼承全局背景 */
 }
 
 h2 {
@@ -100,13 +111,8 @@ h2 {
 
 /* 響應式設計，讓按鈕在手機上進一步縮小 */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1.3rem;
-        line-height: 1.8;
+    .logo-image {
+        width: 100px; /* 手機上縮小 Logo */
     }
 
     .cta-button, .contact-button {
@@ -142,3 +148,4 @@ footer {
     background-color: #1c1c1e;
     text-align: center;
 }
+
