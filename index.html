@@ -11,27 +11,15 @@
   
   <!-- 引入 Google 字體 -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  
   <style>
-    /* 深色漸變背景設置 */
+    /* 全局樣式 */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1a1a1a, #4B3A22); /* 黑色到深金色的漸變 */
-      color: #ffffff; /* 主字體顏色 */
-      position: relative;
-    }
-
-    /* 透明的暗色覆蓋層，讓背景更柔和 */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); /* 60% 透明度的黑色覆蓋層 */
-      z-index: -1;
+      background: #1a1a1a;
+      color: #ffffff;
     }
 
     /* Hero 區域設置 */
@@ -39,46 +27,86 @@
       background-image: url('images/your-image-file.png'); /* 替換為你的背景圖片 */
       background-size: cover;
       background-position: center;
-      height: 500px; /* 增加背景區域高度，避免擁擠 */
+      height: 600px;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; /* 確保標題和副標題垂直排列 */
-      color: #ffd700; /* 金色字體 */
+      flex-direction: column;
+      color: #ffd700;
       text-align: center;
-      padding: 20px; /* 增加內邊距確保文本不會靠得太近 */
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
     }
 
-    /* 主標題設置 */
+    /* Hero 標題樣式 */
     h1 {
-      font-size: 2.5em; /* 調整標題字體大小，避免過大 */
-      letter-spacing: 1px;
-      margin-bottom: 10px; /* 增加標題與副標題之間的間距 */
-      color: #ffd700; /* 金色字體 */
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ffd700;
     }
 
-    /* 副標題設置 */
     h2 {
-      font-size: 1.8em; /* 調整副標題字體大小 */
-      letter-spacing: 0.5px;
-      margin-top: 0; /* 保持副標題和標題緊湊，但不擁擠 */
-      color: #ffd700; /* 金色字體 */
+      font-size: 2em;
+      margin-top: 0;
+      color: #ffd700;
     }
 
-    /* 段落設置 */
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #d4af37; /* 金色變體字體 */
+    /* 卡片式佈局 */
+    .feature-cards {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card img {
+      max-width: 100px;
       margin-bottom: 20px;
     }
 
-    /* 行動呼籲按鈕 */
+    .feature-card h3 {
+      font-size: 1.5em;
+      color: #ffd700;
+    }
+
+    .feature-card p {
+      font-size: 1em;
+      color: #d4af37;
+      line-height: 1.6;
+    }
+
+    /* 過渡動畫效果 */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+    }
+
+    /* 按鈕設置 */
     .cta-button {
       font-family: 'Playfair Display', serif;
       font-size: 1.5em;
       text-transform: uppercase;
-      background: linear-gradient(45deg, #FFD700, #FFA500); /* 漸變背景，金色到橙色 */
+      background: linear-gradient(45deg, #FFD700, #FFA500);
       color: #333;
       padding: 15px 30px;
       border-radius: 50px;
@@ -87,104 +115,89 @@
       letter-spacing: 1.5px;
       display: inline-block;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* 懸停效果 */
     .cta-button:hover {
-      background: linear-gradient(45deg, #FFA500, #FF4500); /* 懸停時變成橙色到深橙色漸變 */
+      background: linear-gradient(45deg, #FFA500, #FF4500);
       color: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 增強陰影效果 */
-      transform: scale(1.05); /* 輕微放大按鈕 */
-    }
-
-    /* 主內容區域 */
-    .main-content {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
     }
 
     /* 手機優化 */
     @media (max-width: 768px) {
+      .feature-cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
       h1 {
-        font-size: 1.5em; /* 進一步減小標題字體大小 */
-        letter-spacing: 0.5px;
-        line-height: 1.2; /* 減小行高，讓標題更緊湊 */
-        margin-bottom: 5px; /* 減少標題與內容之間的間距 */
+        font-size: 2.5em;
       }
 
       h2 {
-        font-size: 1.3em; /* 減小副標題字體大小 */
-        letter-spacing: 0.5px;
-        line-height: 1.2; /* 讓副標題更緊湊 */
-      }
-
-      p {
-        font-size: 1em; /* 調整正文字體大小 */
+        font-size: 1.8em;
       }
 
       .cta-button {
-        font-size: 1.1em; /* 調整按鈕字體大小 */
-        padding: 8px 15px; /* 調整按鈕的內邊距 */
-      }
-
-      .main-content {
-        padding: 10px; /* 減少內邊距，適應小屏幕 */
-      }
-
-      .hero-section {
-        height: 450px; /* 增加背景區域的高度 */
-        padding-top: 40px;
+        font-size: 1.2em;
+        padding: 10px 20px;
       }
     }
-
-    /* 平板電腦優化 */
-    @media (max-width: 1024px) {
-      h1 {
-        font-size: 2.5em; /* 調整標題字體大小 */
-      }
-
-      h2 {
-        font-size: 2.2em;
-      }
-
-      p {
-        font-size: 1.1em;
-      }
-
-      .hero-section {
-        height: 350px;
-      }
-    }
-
   </style>
 </head>
+
 <body>
 
-  <!-- 頭部區域 -->
+  <!-- Hero 區域 -->
   <div class="hero-section">
     <h1>UP國際娛樂</h1>
     <h2>頂尖酒店經紀招募</h2>
+    <a href="https://www.instagram.com/love.__.1688/" target="_blank" class="cta-button">立即關注我們</a>
   </div>
 
-  <!-- 主要內容區域 -->
-  <div class="main-content">
-    <h2>高薪機會等你加入</h2>
-    <p>UP國際娛樂致力於為優質人才提供高端就業機會。我們正誠邀有志之士加入我們的酒店經紀團隊，無論你是新手還是有經驗的專業人士，我們都能為你提供理想的平台，讓你開創輝煌的職業生涯。</p>
+  <!-- 卡片式佈局 -->
+  <section class="feature-cards">
+    <div class="feature-card fade-in">
+      <img src="images/high-salary.png" alt="高薪工作">
+      <h3>高薪工作</h3>
+      <p>我們提供業界頂尖的薪酬待遇，讓你快速實現財務自由。</p>
+    </div>
+    <div class="feature-card fade-in">
+      <img src="images/flexible-hours.png" alt="靈活工作時間">
+      <h3>靈活工作時間</h3>
+      <p>我們理解每個人的需求不同，因此提供靈活的工作時間安排。</p>
+    </div>
+    <div class="feature-card fade-in">
+      <img src="images/safe-environment.png" alt="安全的工作環境">
+      <h3>安全的工作環境</h3>
+      <p>UP國際娛樂保證每位夥伴都能在舒適、安全的環境中工作。</p>
+    </div>
+  </section>
 
+  <!-- 內容區域 -->
+  <div class="main-content">
     <h2>加入我們的優勢</h2>
     <p>我們提供專業的培訓、靈活的工作時間以及業界頂尖的客戶資源。與我們合作，你將享受高度的自由與安全的工作環境，讓你在舒適的氛圍中實現財務自由。我們的酒店經紀職位不僅有高薪保障，還能為你提供長期的職業發展機遇。</p>
-
     <h2>我們的使命</h2>
     <p>我們的使命是讓每位合作夥伴都能在頂級的工作環境中發展自己的潛力。我們理解每個人的需求不同，因此提供個性化的發展方案，確保你能夠在短時間內實現個人和職業的雙重成長。</p>
   </div>
 
-  <!-- 行動呼籲按鈕 -->
-  <div class="contact-info">
-    <a href="https://www.instagram.com/love.__.1688/" target="_blank" class="cta-button">立即關注我們</a>
-  </div>
+  <script>
+    // 簡單的過渡動畫腳本
+    window.addEventListener('scroll', function () {
+      const elements = document.querySelectorAll('.fade-in');
+      const viewportHeight = window.innerHeight;
+
+      elements.forEach(function (element) {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < viewportHeight) {
+          element.classList.add('visible');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
-
