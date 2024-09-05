@@ -29,25 +29,31 @@
       z-index: -1; /* 保證覆蓋層在內容後面 */
     }
 
-    /* 標題字體與設置 */
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
+    /* Hero 區域設置 */
+    .hero-section {
+      background-image: url('images/your-image-file.png'); /* 替換為你的背景圖片 */
+      background-size: cover;
+      background-position: center;
+      height: 500px; /* 增加背景區域高度，避免擁擠 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* 確保標題和副標題垂直排列 */
       color: #ffd700;
       text-align: center;
-      margin-bottom: 20px;
+      padding: 20px; /* 增加內邊距確保文本不會靠得太近 */
     }
 
     h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      font-size: 2.5em; /* 調整標題字體大小，避免過大 */
+      letter-spacing: 1px;
+      margin-bottom: 10px; /* 增加標題與副標題之間的間距 */
     }
 
     h2 {
-      font-size: 2.5em;
-      letter-spacing: 1px;
+      font-size: 1.8em; /* 調整副標題字體大小 */
+      letter-spacing: 0.5px;
+      margin-top: 0; /* 保持副標題和標題緊湊，但不擁擠 */
     }
 
     /* 段落設置 */
@@ -85,28 +91,6 @@
       margin: 0 auto;
     }
 
-    /* Hero 區域設置 */
-    .hero-section {
-      background-image: url('images/your-image-file.png'); /* 替換為你的背景圖片 */
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffd700;
-      text-align: center;
-      font-size: 2.5em;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* 行動呼籲按鈕區域 */
-    .contact-info {
-      text-align: center;
-      margin-top: 50px;
-    }
-
     /* 手機優化 */
     @media (max-width: 768px) {
       h1 {
@@ -136,7 +120,7 @@
       }
 
       .hero-section {
-        height: 450px; /* 進一步增加背景區域的高度，讓標題有足夠空間 */
+        height: 450px; /* 增加背景區域的高度，讓標題有足夠空間 */
         padding-top: 40px; /* 增加頂部內邊距，確保標題顯示良好 */
       }
     }
