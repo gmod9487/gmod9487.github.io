@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1e;
+    color: #f5f5f7;
+    line-height: 1.6;
+}
+
+header.hero {
+    background-image: url('https://your-high-end-background-image.jpg'); /* 可替換為你選擇的背景圖片 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffd700; /* 金色文字 */
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #ffa500;
+}
+
+.content-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #2c2c2e;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #ffd700;
+}
+
+footer {
+    padding: 20px;
+    background-color: #1c1c1e;
+    text-align: center;
+}
