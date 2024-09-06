@@ -88,47 +88,35 @@ h2 {
 }
 
 /* Instagram 按鈕樣式 */
+/* 父容器樣式 */
 #contact {
-    text-align: center; /* 水平居中 */
+    text-align: center; /* 確保按鈕水平居中 */
     padding: 40px 0; /* 上下內邊距 */
 }
 
+/* Instagram 按鈕樣式 */
 .contact-button {
     display: inline-block;
     padding: 0;
-    background-color: #fff; /* 白色背景，保持按鈕的可見性 */
+    background-color: #fff; /* 按鈕白色背景 */
     border-radius: 5px;
     border: 2px solid #ffd700; /* 金色邊框 */
     width: 50px;  /* 按鈕寬度 */
     height: 50px; /* 按鈕高度 */
     display: flex;
-    justify-content: center;  /* 水平居中 */
-    align-items: center;      /* 垂直居中 */
-    margin: 20px auto;        /* 自動居中 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    margin: 20px auto;       /* 自動居中 */
 }
 
 .button-logo {
-    width: 30px; /* Instagram 圖標大小 */
-    height: 30px;
+    width: 30px; /* 圖標寬度 */
+    height: 30px; /* 圖標高度 */
+    display: block;
 }
 
 /* 響應式設計：手機版 */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1.3rem;
-        line-height: 1.8;
-    }
-
-    .cta-button {
-        width: 100%;
-        padding: 20px 30px;
-        font-size: 1.6rem;
-    }
-
     .contact-button {
         width: 50px;  /* 手機上保持按鈕為 50px */
         height: 50px;
