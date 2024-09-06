@@ -96,16 +96,16 @@ h2 {
     border: 2px solid #ffd700; /* 金色邊框 */
     text-align: center;
     margin-top: 20px;
-    width: 40px;  /* 按鈕寬度 */
-    height: 40px; /* 按鈕高度 */
+    width: 30px;  /* 按鈕寬度，縮小為 30px */
+    height: 30px; /* 按鈕高度，縮小為 30px */
     display: flex;
     justify-content: center;  /* 水平居中 */
     align-items: center;      /* 垂直居中 */
 }
 
 .button-logo {
-    width: 30px; /* Instagram 圖標大小與按鈕一致，縮小至30px */
-    height: 30px; /* Instagram 圖標大小 */
+    width: 20px; /* Instagram 圖標大小進一步縮小 */
+    height: 20px; /* Instagram 圖標大小 */
 }
 
 /* 響應式設計：手機版 */
@@ -126,13 +126,13 @@ h2 {
     }
 
     .contact-button {
-        width: 60px;  /* 手機上進一步縮小按鈕 */
-        height: 60px;
+        width: 40px;  /* 手機上稍微增大按鈕 */
+        height: 40px;
     }
 
     .button-logo {
-        width: 35px;  /* 手機上縮小圖標 */
-        height: 35px;
+        width: 25px;  /* 手機上縮小圖標 */
+        height: 25px;
     }
 }
 
