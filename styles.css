@@ -14,26 +14,14 @@ body {
     line-height: 1.6;
 }
 
-/* 清除所有區塊的背景顏色，確保背景透明 */
+/* 清除所有區塊的背景，確保共用全局背景 */
 header.hero, .content-section, footer {
-    background-color: transparent; /* 背景透明，繼承body背景 */
-}
-
-/* Logo樣式 */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.site-logo {
-    width: 150px;
-    height: auto;
+    background-color: transparent; /* 背景透明，繼承body的背景 */
 }
 
 /* Hero區域樣式 */
 header.hero {
-    height: 100vh;
+    height: 100vh; /* 佔滿整個螢幕的高度 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +30,7 @@ header.hero {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.7); /* 這裡是半透明的黑色背景，用於突出顯示文字 */
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景，用於文字區域 */
     padding: 20px;
     border-radius: 10px;
 }
