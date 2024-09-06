@@ -104,8 +104,8 @@ h2 {
 }
 
 .button-logo {
-    width: 15px; /* Instagram 圖標大小 */
-    height: 15px;
+    width: 30px; /* Instagram 圖標大小與按鈕一致，縮小至30px */
+    height: 30px; /* Instagram 圖標大小 */
 }
 
 /* 響應式設計：手機版 */
