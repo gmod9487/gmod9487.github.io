@@ -78,8 +78,8 @@ h2 {
     background-color: #fff;
     border-radius: 5px;
     border: 2px solid #ffd700;
-    width: 60px !important;  /* 強制寬度為 60px */
-    height: 60px !important; /* 強制高度為 60px */
+    width: 70px !important;  /* 強制寬度為 70px */
+    height: 70px !important; /* 強制高度為 70px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,8 +87,8 @@ h2 {
 }
 
 .button-logo {
-    width: 40px !important; /* 強制圖標寬度為 40px */
-    height: 40px !important; /* 強制圖標高度為 40px */
+    width: 50px !important; /* 強制圖標寬度為 50px */
+    height: 50px !important; /* 強制圖標高度為 50px */
     display: block;
 }
 
